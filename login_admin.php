@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login - Dojo Ventura</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
     <?php require_once 'assets/layout/header_inicial.php' ?>
 
     <main class="container_central">
         <div class="cartao_formulario">
+
             <div class="caixa_icone_escudo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
             </div>
-            
+
             <h2 class="titulo_formulario">Acesso Restrito</h2>
             <p class="subtitulo_formulario">Apenas administradores autorizados</p>
 
-            <form action="processa_login.php" method="POST" class="formulario">
+            <form action="dashboard_admin.php" class="formulario">
                 <div class="grupo_campo">
                     <label for="usuario" class="rotulo">Usuário</label>
                     <div class="campo_com_icone">
@@ -43,8 +46,9 @@
                         <input type="password" id="senha" name="senha" class="campo_entrada" placeholder="Digite sua senha" required>
                     </div>
                 </div>
-                
-                <a href="dashboard_admin.php" class="botao_enviar_admin">Iniciar Sessão</a>
+
+                <button type="submit" class="botao_enviar_admin">Acessar Dashboard</button>
+
             </form>
 
         </div>
@@ -55,4 +59,5 @@
     </button>
 
 </body>
+
 </html>
